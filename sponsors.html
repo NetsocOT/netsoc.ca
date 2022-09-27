@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Sets title of web tab -->
+  <title>All Sponsors | Netsoc OntarioTech</title>
+  <!-- Sets favicon (Netsoc logo applied as icon image in browser tab) -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- CSS imported and applied -->
+  <!-- common.css is the menu bar + footer -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/sponsors.css">
+  <!-- FontAwesome CSS imported and applied -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- JQuery imported and applied -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+  <style media="screen"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <!-- Menu bar -->
+  <div class="menu">
+
+    <nav>
+
+      <!-- Hamburger icon for menu -->
+      <input type="checkbox" id="showMenu">
+      <label for="showMenu" class="menuIcon"><i class="fas fa-bars"></i></label>
+
+      <!-- Includes:
+      - Netsoc Logo
+      - All menu options
+      - Arrow beside menu option
+      - Dropdown on menu arrow options
+      - Searchbar -->
+      <div class="menuContent">
+
+        <!-- Netsoc logo inside menu -->
+        <div class="menuLogo"><a href="/"><img src="images/logos/netsoc/NetsocLogo.png" alt="Netsoc logo"></a></div>
+
+        <!-- About, News, Events, Sponsors, Contact -->
+        <ul class="allMenuOptions">
+
+          <!-- "About" menu option -->
+          <li class="menuOption" >
+
+            <!-- Desktop: "About" menu option -->
+            <a href="/#about" class="desktopMenuOption"> About
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </a>
+
+            <!-- Mobile:"About" menu option -->
+            <input type="checkbox" id="showAbout" onclick="goToAnchor('about')">
+            <label for="showAbout">
+              About
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </label>
+
+            <!-- Dropdown on "About" menu option -->
+            <ul>
+              <li><a href="overview.html">Club Overview</a></li>
+              <li><a href="team.html">Our Team</a></li>
+            </ul>
+
+          </li>
+
+          <!-- "News" menu option -->
+          <li class="menuOption"><a href="/#news">News</a></li>
+
+          <!-- "Events" menu option -->
+          <li class="menuOption">
+
+            <!-- Desktop: "Events" menu option -->
+            <a href="/#events" class="desktopMenuOption">
+              Events
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </a>
+
+            <!-- Mobile: "Events" menu option -->
+            <input type="checkbox" id="showEvents" onclick="goToAnchor('events')">
+            <label for="showEvents">
+              Events
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </label>
+
+            <!-- Dropdown on "Events" menu option -->
+            <ul>
+              <li><a href="/#joinus">Join Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+
+          </li>
+
+          <!-- "Sponsors" menu option -->
+          <li class="menuOption"><a href="/#sponsors">Sponsors</a></li>
+          <!-- "Contact" menu option -->
+          <li class="menuOption"><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Search bar -->
+      <form class="" action="/" method="post" id="searchBar">
+        <!-- Input field for search bar -->
+        <div class="searchBox">
+          <input type="text" placeholder="Search Netsoc" class="active">
+          <!-- Magnifying glass icon -->
+          <div class="searchIcon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </form>
+
+    </nav>
+
+  </div>
+
+  <!-- START HERE -->
+  <h1>Coming Soon!</h1>
+
+  <!-- Script points towards my JS file -->
+  <script src = "js/common.js"></script>
+
+</body>
+
+</html>

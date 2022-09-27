@@ -1,0 +1,608 @@
+/* Short introductory "About Us" banner */
+.introductoryBanner {
+  position: relative;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100vh;
+}
+
+.introductoryBanner:after{
+  position: absolute;
+  content: "";
+  background-color: #3e3e3e;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+
+/* Background of introductory banner */
+.introductoryBannerVideo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text inside introductory banner */
+.introductoryBannerContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.introductoryBannerContent h1 {
+  font-size: 6vw;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 73px;
+}
+
+.introductoryBannerTitle {
+  display: block;
+  opacity: 0;
+  animation: revealText .5s forwards;
+}
+
+.introductoryBannerContent p {
+  color: #fff;
+  max-width: 710px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 0px 33px;
+  font-size: 1em;
+}
+
+.introductoryBannerDescription {
+  animation-delay: .175s;
+}
+
+/* Buttons inside introductory banner */
+.introductoryBannerOptions,
+.newsBtn a,
+.involvedButton {
+  background: #fff;
+  color: #000;
+  display: inline-block;
+  padding: 10px 35px;
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #fff;
+  transition: .2s all;
+  margin: 5px;
+}
+
+.introductoryBannerOptions:hover {
+  background: #1b1b1b;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Animation for text inside introductory banner */
+@keyframes revealText {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive configuration for introductory banner */
+@media (min-width: 2000px) {
+  .introductoryBannerContent p {
+    margin-top: 40px;
+    font-size: 0.9vw;
+  }
+  .introductoryBannerOptions {
+    font-size: 24px;
+  }
+}
+
+/* Responsive configuration for introductory banner */
+@media (max-width: 750px) {
+  .introductoryBannerContent p {
+    width: 90vw;
+  }
+  .introductoryBannerContent h1 {
+    margin-top: 70px;
+    font-size: 10vw;
+    line-height: 53px;
+  }
+}
+
+/* Title of each section arrow */
+.sectionArrowTitle {
+  color: #A0A0A0;
+  display: inline-block;
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* Arrow icon for under section title */
+.arrow {
+  height: 2px;
+  width: 25px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 4px;
+  transition: all .4s ease;
+  background: #A0A0A0;
+}
+
+.arrow:before,
+.arrow:after {
+  content: "";
+  background: #A0A0A0;
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  border-radius: 30%;
+}
+
+.arrow:before {
+  right: -2px;
+  bottom: -3px;
+  transform: rotate(-45deg);
+}
+
+.arrow:after {
+  right: -2px;
+  top: -3px;
+  transform: rotate(45deg);
+}
+
+/* Section title beside arrow will be highlighted when hovered */
+.sectionArrowTitle:hover {
+  color: #00bae9;
+}
+
+/* Arrow icon under section title will be extended when hovered */
+.sectionArrowTitle:hover .arrow {
+  width: 40px;
+  margin-right: 5px;
+}
+
+/* News card */
+.newsCard {
+  color: #0C0C0C;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  background-color: #FFFFFF;
+}
+
+div.owl-dots {
+  display: none;
+}
+
+/* Image inside news card */
+.newsImg {
+  height: 200px;
+  width: 100%;
+}
+
+.newsImg img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Content inside news card */
+.newsContent {
+  padding: 10px 20px;
+}
+
+/* Title of news */
+.newsTitle {
+  font-size: 25px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Styling posted date of news */
+.newsDate {
+  font-size: 17px;
+  font-weight: 600;
+  color: #262626;
+  line-height: 20px;
+}
+
+/* Styling description of news */
+.newsContent p {
+  margin: 10px 0;
+  line-height: 21px;
+  height: calc(3 * 21px);
+  overflow: hidden;
+  position: relative;
+}
+
+.newsContent p::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 21px;
+  width: 75%;
+  background: linear-gradient(90deg, transparent, #FFFFFF);
+}
+
+/* Styling "Read More" news button */
+.newsBtn a,
+.involvedButton {
+  background: #1b1b1b;
+  color: #fff;
+  margin: 0px;
+  padding: 5px 20px;
+}
+
+/* "Read More" news button will lighten when hovered */
+.newsBtn a:hover,
+.involvedButton:hover {
+  background: #2f2f2f;
+}
+
+/* Events ticket card */
+.eventsCard {
+  /* Ensures card has suficient space between the arrow sections */
+  margin-top: 20px;
+  /* Maintains the ticket asthetic of the card in the left side */
+  position: relative;
+}
+
+/* The positioning of the design portion of the events card */
+.eventsAesthetic {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  bottom: 30px;
+  /* The positioning of the dashed line */
+  width: 139px;
+  /* The background color of both lines */
+  background-color: #FFFFFF;
+}
+
+/* The top punched hole */
+.eventsAesthetic::before {
+  content: ' ';
+  background-color: transparent;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/ticket-top.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 135px;
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+/* The bottom punched hole */
+.eventsAesthetic::after {
+  content: ' ';
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/ticket-bottom.svg');
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  width: 135px;
+  height: 100px;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+/* The solid line */
+.eventSolidLine {
+  content: ' ';
+  width: 3px;
+  border-radius: 3px;
+  background:  #00bae9;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(130px/3.1);
+}
+
+/* The dotted line */
+.eventDottedLine {
+  content: ' ';
+  width: 0px;
+  border-right: 5px dashed #f0f0f0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+
+/* Text inside events ticket card */
+.eventsText {
+  position: relative;
+  background-color: #FFFFFF;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: calc(100% - 130px);
+  margin-left: calc(130px - 1px);
+  padding: 35px;
+}
+
+/* Name of event */
+.eventsText h4 {
+  font-size: 35px;
+  margin: 0 140px 0 0;
+}
+
+/* Date of event */
+.eventsText p.date {
+  color:  #00bae9;
+  margin: 0;
+  padding-top: 10px;
+}
+
+/* Further event info */
+.eventsText ul {
+  list-style: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+
+/* Title of more event info */
+.eventsText ul span {
+  display: block;
+  color: #a8a8a8;
+}
+
+/* Each event info */
+.eventsText ul li {
+  padding: 0;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+/* Each event info's icon */
+.eventsText ul li i {
+  color: #00bae9;
+}
+
+/* Register button inside event card */
+.eventsText a.register {
+  background: #1b1b1b;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #fff;
+  transition: .2s all;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+}
+
+.eventsText a.register:hover {
+  background: #2f2f2f;
+}
+
+/* Responsive configuration for event ticket card */
+@media only screen and (max-width: 600px) {
+  .eventCard {
+    position: relative;
+ }
+ .eventsAesthetic {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    height: 120px;
+    position: relative;
+ }
+ .eventsAesthetic:after, .eventsAesthetic:before {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    width: 126px;
+    top: 0px;
+ }
+  .eventsAesthetic:after {
+    left: 80px;
+    right: auto;
+ }
+  .eventsAesthetic:before {
+    left: auto;
+    right: -146px;
+ }
+  .eventsAesthetic .eventDottedLine {
+    width: 100%;
+    border-top: 4px dashed #f0f0f0;
+    border-right: none;
+    height: 4px;
+    top: 90px;
+    left: 0;
+ }
+  .eventsAesthetic .eventSolidLine {
+    width: 80%;
+    height: 3px;
+    top: 45px;
+    left: 10%;
+ }
+  .eventsText {
+    margin-left: 0;
+    width: 100%;
+    padding: 3% 5% 5% 5%;
+ }
+  .eventsText h4 {
+    font-size: 32px;
+    margin: 0;
+ }
+  .eventsText ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+ }
+  .eventsText ul span {
+    display: block;
+    color: #a8a8a8;
+ }
+  .eventsText ul li {
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    padding-right: 30px;
+    margin-bottom: 5px;
+ }
+  .eventsText a.register {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+    text-align: center;
+ }
+}
+
+/* All involved cards grouped as one */
+.involvedWrapper {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Each individual involved card */
+.involvedCard {
+	position: relative;
+  width: 32.5%;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 20px;
+}
+
+/* Responsive configuration for each involved card */
+@media only screen and (max-width: 1200px) {
+  .involvedCard {
+    width: 45%;
+  }
+}
+
+/* Responsive configuration for each involved card */
+@media only screen and (max-width: 950px) {
+  .involvedCard {
+    width: 100%;
+  }
+}
+
+/* Each involved card's image and title */
+.involvedContent {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+/* When an involved card is hovered, shows the button and moves the title and image up as well */
+.involvedCard:hover .involvedContent {
+	transform: translateY(-20px);
+}
+
+/* The size of the image of each involved card */
+.involvedImage {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+/* The positioning of the image of each involved card */
+.involvedContent img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* The title of each involved card */
+.involvedContent h3 {
+	color: #fff;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+/* The button inside the involved card */
+.involvedButton {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+  text-align: center;
+}
+
+/* When the involved card is hovered, the text inside the button is exposed and goes up (animation) */
+.involvedCard:hover .involvedButton {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+/* The text inside the involved card button */
+.involvedButton a {
+	color: #fff;
+	font-size: 14px;
+}
+
+/* Sponsors card */
+.sponsorsCard {
+  margin-top: 20px;
+  /* background-color: pink; */
+}
+
+/* Image inside sponsors card */
+.sponsorsImg {
+  height: 100px;
+  width: 100%;
+}
+
+.sponsorsImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

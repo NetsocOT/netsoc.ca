@@ -1,0 +1,192 @@
+/* Ensures web content doesnt overlap with nav bar */
+/* Gives a space divider between them */
+.spacer {
+  width: 100%;
+  border: solid 27px transparent;
+}
+
+/* Makes sure executive section is responsive */
+.row {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 30px;
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (min-width: 1440px) {
+  div.info {
+    top: 40px;
+  }
+  h5.name {
+    font-size: 22px;
+  }
+  p.position {
+    font-size: 16px;
+  }
+  p.bio {
+    font-size: 16px;
+  }
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (min-width: 1700px) {
+  div.info {
+    top: 50px;
+  }
+  h5.name {
+    font-size: 30px;
+  }
+  p.position {
+    font-size: 20px;
+  }
+  p.bio {
+    font-size: 20px;
+  }
+  div.socials i {
+    font-size: 30px;
+  }
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (min-width: 2000px) {
+  div.info {
+    top: 60px;
+  }
+  h5.name {
+    font-size: 35px;
+  }
+  p.position {
+    font-size: 25px;
+  }
+  p.bio {
+    font-size: 25px;
+  }
+  div.socials i {
+    font-size: 35px;
+  }
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (min-width: 2400px) {
+  div.info {
+    top: 70px;
+  }
+  h5.name {
+    font-size: 40px;
+  }
+  p.position {
+    font-size: 30px;
+  }
+  p.bio {
+    font-size: 30px;
+  }
+  div.socials i {
+    font-size: 45px;
+  }
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (max-width: 868px) {
+  .row {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Responsive configuration for executive profile */
+@media screen and (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Executive card */
+.executive {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+}
+
+/* image of each card */
+.avatar {
+  width: 100%;
+  height: auto;
+}
+
+/* name and position of each executive */
+.info {
+  text-align: center;
+  color: #000;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+}
+
+/* name of each executive */
+.name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* position of each executive */
+.position {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+/* animated background when hovering each executive */
+.animatedBackground {
+  height: 0;
+  background-color: #14181f;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+  transition: all 0.5s ease-in;
+  text-align: center;
+  /* animation */
+  top: 0;
+  right: -100%;
+  height: 100%;
+}
+
+/* shows animated background when each executive is hovered */
+.executive:hover .animatedBackground {
+  height: 100%;
+  padding: 20px 10px;
+  /* animation*/
+  right: 0;
+}
+
+/* makes sure bio and social links are centered in the animated background */
+.middle {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+/* short bio */
+.bio {
+  margin: 15px 10px 15px 0px;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+}
+
+/* social links positioning */
+.socials {
+  display: inline-flex;
+  position: relative;
+}
+
+/* each social icon styling */
+.socials i {
+  font-size: 25px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+/* when hovering each social icon, it becomes hightlighted */
+.socials i:hover {
+  color: #00bae9;
+}

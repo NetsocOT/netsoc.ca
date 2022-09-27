@@ -1,0 +1,127 @@
+/* Ensures footer stays at bottom of page and is not fixed */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Ensures web content doesnt overlap with nav bar */
+/* Gives a space divider between them */
+.spacer {
+  width: 100%;
+  border: solid 18px transparent;
+}
+
+/* Shows the user how much story they have left  */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #0061a0;
+  z-index: 2;
+  width: 0%;
+  transition: all 0.3s linear;
+}
+
+/* content inside the post */
+.postContent {
+  display: grid;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+
+/* main image of the post */
+.imageHeader {
+  width: 100%;
+  min-height: 350px;
+  display: grid;
+  border-radius: 10px;
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* title, date, reading time, and social links of post */
+.postInfo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  color: black;
+}
+
+/* title of post */
+.postInfo h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+/* date and reading time of post */
+.postInfo h2 {
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* reading time of post */
+#readingTime {
+  margin-bottom: 20px;
+}
+
+/* social media icons  */
+.postSocials {
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.postSocials a {
+  color: black;
+  cursor: pointer;
+}
+
+.postSocials a:hover {
+  color: #00bae9;
+}
+
+/* Context of post */
+.postStory {
+  position: relative;
+}
+
+.postStory p {
+  margin-top: 20px;
+  position: relative;
+  color: #CBCCD6;
+}
+
+.postStory a {
+  color: #CBCCD6;
+  text-decoration: underline;
+}
+
+.postStory a:hover {
+  color: #FFF;
+}
+
+/* Responsive configuration */
+@media (max-width: 700px) {
+  .postContent {
+    width: 90%;
+ }
+  .postInfo h1 {
+    font-size: 25px;
+ }
+}

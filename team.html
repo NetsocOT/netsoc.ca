@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Sets title of web tab -->
+  <title>Meet The Team | Netsoc OntarioTech</title>
+  <!-- Sets favicon (Netsoc logo applied as icon image in browser tab) -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- CSS imported and applied -->
+  <!-- common.css is the menu bar + footer -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/team.css">
+  <!-- FontAwesome CSS imported and applied -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- JQuery imported and applied -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+  <style media="screen"></style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <!-- Menu bar -->
+  <div class="menu">
+
+    <nav>
+
+      <!-- Hamburger icon for menu -->
+      <input type="checkbox" id="showMenu">
+      <label for="showMenu" class="menuIcon"><i class="fas fa-bars"></i></label>
+
+      <!-- Includes:
+      - Netsoc Logo
+      - All menu options
+      - Arrow beside menu option
+      - Dropdown on menu arrow options
+      - Searchbar -->
+      <div class="menuContent">
+
+        <!-- Netsoc logo inside menu -->
+        <div class="menuLogo"><a href="/"><img src="images/logos/netsoc/NetsocLogo.png" alt="Netsoc logo"></a></div>
+
+        <!-- About, News, Events, Sponsors, Contact -->
+        <ul class="allMenuOptions">
+
+          <!-- "About" menu option -->
+          <li class="menuOption" >
+
+            <!-- Desktop: "About" menu option -->
+            <a href="/#about" class="desktopMenuOption"> About
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </a>
+
+            <!-- Mobile:"About" menu option -->
+            <input type="checkbox" id="showAbout" onclick="goToAnchor('about')">
+            <label for="showAbout">
+              About
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </label>
+
+            <!-- Dropdown on "About" menu option -->
+            <ul>
+              <li><a href="overview.html">Club Overview</a></li>
+              <li><a href="team.html">Our Team</a></li>
+            </ul>
+
+          </li>
+
+          <!-- "News" menu option -->
+          <li class="menuOption"><a href="/#news">News</a></li>
+
+          <!-- "Events" menu option -->
+          <li class="menuOption">
+
+            <!-- Desktop: "Events" menu option -->
+            <a href="/#events" class="desktopMenuOption">
+              Events
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </a>
+
+            <!-- Mobile: "Events" menu option -->
+            <input type="checkbox" id="showEvents" onclick="goToAnchor('events')">
+            <label for="showEvents">
+              Events
+              <!-- Arrow icon beside menu option -->
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              </svg>
+            </label>
+
+            <!-- Dropdown on "Events" menu option -->
+            <ul>
+              <li><a href="/#joinus">Join Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+
+          </li>
+
+          <!-- "Sponsors" menu option -->
+          <li class="menuOption"><a href="/#sponsors">Sponsors</a></li>
+          <!-- "Contact" menu option -->
+          <li class="menuOption"><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Search bar -->
+      <form class="" action="/" method="post" id="searchBar">
+        <!-- Input field for search bar -->
+        <div class="searchBox">
+          <input type="text" placeholder="Search Netsoc" class="active">
+          <!-- Magnifying glass icon -->
+          <div class="searchIcon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </form>
+
+    </nav>
+
+  </div>
+
+  <!-- Ensures space between menu bar and section title -->
+  <div class="spacer">
+    &nbsp;
+  </div>
+
+  <!-- Meet the team section -->
+  <div class="optionSection">
+
+    <!-- Name of section -->
+    <h1 class="sectionTitle">Netsoc's 2022-2023 Executive Team</h1>
+
+    <div class="row">
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Nick D.</h5>
+          <p class="position">President of Netsoc</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Nick is in his 4th year in the Networking and I.T Security program. He is an experienced Systems and Network Administrator that has interned at FGF Brands and Cisco Meraki
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/nicholas-dow1/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:nicholas.dow@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Blake W.</h5>
+          <p class="position">Chief Information Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Blake is in his 4th year in the Networking and I.T Security program. He recently interned with Verkada as a Technical Support Engineer in California and is currently working as a T.A
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/blake-whiting-766613235/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:blake.whiting@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-f.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Rinoa M.</h5>
+          <p class="position">Associate Information Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Rinoa is in her 4th year in the Networking and I.T Security program. She recently interned with RBI as a Software Engineer and will be returning to do full-time in fall 2023
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/dinah-rinoa-malapaya/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:dinahrinoa.malapaya@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Ryan M.</h5>
+          <p class="position">Associate Information Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Ryan is in his 4th year in the Networking and I.T Security program. He's worked various IT roles from being a Technical Specialist to interning with Cisco Meraki as a Technical Support Engineer
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/rmanzie/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:ryan.manzie@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Riley A.</h5>
+          <p class="position">Deputy Information Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Riley is in his 2nd year in the Networking and I.T Security program. He's been in the IT field for the past decade working as a Contract Professor in Durham College and as a consultant
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/riley-a-96458aaa/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:riley.andrusiak@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Shiv M.</h5>
+          <p class="position">Chief Financial Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Shiv is in his 4th year in the Networking and I.T Security program. Before coming to Ontario Tech, he obtained an Economics degree at Wilfrid Laurier and was a finance intern in Scotiabank. Currently, he is interning with Compugen Inc as a Network Analyst intern
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/shiv-mangal/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:shiv.mangal@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-f.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Amy L.</h5>
+          <p class="position">Chief Communications Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Amy is in her 3rd year in the Networking and I.T Security program. She recently interned at Microsoft as a Business Program Manager. Currently, she is also in the Student Union and Bitsoc
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/amyhwl/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:amy.lee@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-f.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Oreoluwa A.</h5>
+          <p class="position">Associate Communications Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Oreoluwa is in her 3rd year in the Networking and I.T Security program. Her past internships in Flutterwave and Zuri led her to experience the ins and outs of UI/UX design
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/oreoluwaawoeyo/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:oreoluwa.awoeyo@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Nakul J.</h5>
+          <p class="position">Deputy Communications Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Nakul is in his 4th year in the Networking and I.T Security program. Last summer, he interned with Cisco Meraki as a Technical Support Engineer. Currently, he is OTU's Networking Lab Technician
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/nakuljain13/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:nakul.jain@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Jeet V.</h5>
+          <p class="position">Chief Operating Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Jeet is in his 3rd year in the Networking and I.T Security program. Last summer, he interned at Rogers for CloudOps. Now, he's interning with Cisco Meraki as a Technical Support Engineer
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/jtvsdeo/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:jeet.vasudeo@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Ragib S.</h5>
+          <p class="position">Associate Operating Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Ragib is in his 2nd year in the Networking and I.T Security program. With his passion towards access to digital literacy and cyber-security, he currently has founded several startups. His most recent one, JaduPC
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/ragib-ehsan/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:mdragibehsan.shadab@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Utku S.</h5>
+          <p class="position">Associate Operating Officer</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Utku is in his 3rd year in the Networking and I.T Security program. Apart from Netsoc, he currently holds several positions in school, such as being the IT Director of Bitsoc. In his spare time, he also teaches penetration testing workshops
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/utku-soytekin-53476a225/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:utku.soytekin@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-f.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Maia F.</h5>
+          <p class="position">1st/2nd Year Liaison</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Maia is in her 2nd year in the Networking and I.T Security program. By joining Netsoc, she is excited to get into the field and gain industry experience
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/maia-frangoudis-567111246/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:maia.frangoudis@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Hayden N.</h5>
+          <p class="position">1st/2nd Year Liaison</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Hayeden is in his 2nd year in the Networking and I.T Security program. Other than being a student liason for Netsoc, he currently works with TELUS International AI Data Solutions as a Data Quality Analyst
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/hayden-nolan/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:hayden.nolan@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Executive card -->
+      <div class="executive">
+
+        <!-- Executive's avatar image -->
+        <div class="avatar"><img src="images/executives/team-m.png" alt="" class="avatar"></div>
+
+        <!-- Executive's name and position in Netsoc -->
+        <div class="info">
+          <h5 class="name">Liam M.</h5>
+          <p class="position">1st/2nd Year Liaison</p>
+        </div>
+
+        <!-- Animated background when hovered will show short bio and social links -->
+        <div class="animatedBackground">
+
+          <!-- Short bio and social links will be centered -->
+          <div class="middle">
+
+            <!-- Executive short bio -->
+            <p class="bio">
+              Liam is in his 2nd year in the Networking and I.T Security program. By being a student liason for Netsoc, he is excited to get into the field and gain industry experience
+            </p>
+
+            <!-- Executive's social links -->
+            <div class="socials">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/liam-mcintosh-a85172240/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:liam.mcintosh@ontariotechu.net">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer section -->
+  <footer>
+
+    <!-- All contact links+ title (just sets display as flex) -->
+    <div class="contactWrapperBase" id="contact">
+
+      <!-- All contact links+ title (further configuration) -->
+      <div class="contactWrapper">
+
+        <!-- Title of all contacts -->
+        <h2>Connect With Netsoc</h2>
+
+        <!-- All contact links grouped as one -->
+        <div class="contacts">
+          <a href="https://maps.google.com/?q=Ontario%20Tech%20University" target="_blank"><span class="fas fa-map-marker-alt"></span></a>
+          <a href="mailto:netsoc@ontariotechu.net"><span class="fas fa-envelope"></span></a>
+          <a href="https://discord.gg/PGjcV5nBeP" target="_blank"><span class="fab fa-discord"></span></a>
+          <a href="https://www.instagram.com/ot_netsoc/" target="_blank"><span class="fab fa-instagram"></span></a>
+          <a href="https://twitter.com/OT_Netsoc" target="_blank"><span class="fab fa-twitter"></span></a>
+          <a href="https://www.linkedin.com/company/ot-netsoc/" target="_blank"><span class="fab fa-linkedin"></span></a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- copyright icon + text -->
+    <div class="copyrightWrapper">
+      <!-- copyright icon -->
+      <span class="far fa-copyright"></span>
+      <!-- copyright text -->
+      <span>Netsoc 2022 All Rights Reserved</span>
+    </div>
+
+  </footer>
+
+  <!-- Script points towards my JS file -->
+  <script src = "js/common.js"></script>
+
+</body>
+
+</html>
