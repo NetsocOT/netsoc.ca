@@ -59,13 +59,30 @@ function eventOptions() {
   icon: 'info',
   showDenyButton: true,
   showCloseButton: true,
-  confirmButtonText: '<a href="post.html" target="_blank" style="color:#fff;">View Event Context</a>',
+  confirmButtonText: '<a href="/posts/post10.html" target="_blank" style="color:#fff;">View Event Context</a>',
   denyButtonText: '<a href="https://forms.gle/f6KNxZd3wkXFRDncA" target="_blank" style="color:#fff;">Register For Event</a>',
   confirmButtonColor: "#00bae9",
   denyButtonColor: "#004c7b",
   allowOutsideClick: false,
   allowEscapeKey: false,
   allowEnterKey:  false});
+}
+
+// Popup will show if Netsoc has a featured event but doesn't need registration
+// UPDATE EVENT CONTEXT LINK
+function eventOptionsNoRegister() {
+  Swal.fire({
+  title: "Choose an option:",
+  icon: 'info',
+  showDenyButton: true,
+  showCloseButton: true,
+  confirmButtonText: '<a href="/posts/post10.html" target="_blank" style="color:#fff;">View Event Context</a>',
+  denyButtonText: 'Register For Event',
+  confirmButtonColor: "#00bae9",
+  denyButtonColor: "#004c7b",
+  allowOutsideClick: false,
+  allowEscapeKey: false,
+  allowEnterKey:  false}).then((result) => {if (result.isDenied) {Swal.fire("Event doesn't require registration", ' ', 'info')}});
 }
 
 // Popup will show if Netsoc not hiring executive members

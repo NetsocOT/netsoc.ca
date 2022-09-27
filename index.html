@@ -171,13 +171,32 @@
     <!-- Name of section -->
     <h1 class="sectionTitle">Latest News</h1>
     <!-- Name of section's arrow option -->
-    <a href="/posts" class="sectionArrowTitle"><span class="arrow"></span>View All News</a>
+    <!-- <a href="/posts" class="sectionArrowTitle"><span class="arrow"></span>View All News</a> -->
 
     <!-- Ensures news cards will loop -->
     <div class="newsCarousel owl-carousel">
 
       <!-- News card -->
       <!-- Need at least 4 featured articles to loop -->
+
+      <div class="newsCard">
+
+        <!-- Image of News card -->
+        <div class="newsImg"><img src="images/posts/post10.png" alt=""></div>
+
+        <!-- Content inside News card -->
+        <div class="newsContent">
+          <!-- News title -->
+          <div class="newsTitle">Getting Your First Job</div>
+          <!-- News posted date -->
+          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 27, 2022</div>
+          <!-- News description -->
+          <p>Attention all STEM students! Are you worried about finding a job post-grad? Sean C. Higgins, CTO and Co-founder of Herjavec Group and Cybersecurity Expert for almost 30 years, is coming on Sept 30th from 2pm - 3.30pm</p>
+          <!-- News read more button -->
+          <div class="newsBtn"><a href="posts/post10.html">Read more</a></div>
+        </div>
+
+      </div>
 
       <div class="newsCard">
 
@@ -236,25 +255,6 @@
 
       </div>
 
-      <div class="newsCard">
-
-        <!-- Image of News card -->
-        <div class="newsImg"><img src="images/posts/post6.jpg" alt=""></div>
-
-        <!-- Content inside News card -->
-        <div class="newsContent">
-          <!-- News title -->
-          <div class="newsTitle">Hackfest Representatives</div>
-          <!-- News posted date -->
-          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 19, 2022</div>
-          <!-- News description -->
-          <p>Netsoc is giving students a chance to represent the club and school in Hackfest!</p>
-          <!-- News read more button -->
-          <div class="newsBtn"><a href="posts/post6.html">Read more</a></div>
-        </div>
-
-      </div>
-
     </div>
 
   </div>
@@ -265,9 +265,9 @@
     <!-- Name of section -->
     <h1 class="sectionTitle">Next Event</h1>
     <!-- Name of section's arrow option -->
-    <a href="events.html" class="sectionArrowTitle"><span class="arrow"></span>View All Events</a><br>
+    <!-- <a href="events.html" class="sectionArrowTitle"><span class="arrow"></span>View All Events</a><br> -->
     <!-- Name of section's arrow option -->
-    <a href="gallery.html" class="sectionArrowTitle"><span class="arrow"></span>View Photo Gallery</a>
+    <!-- <a href="gallery.html" class="sectionArrowTitle"><span class="arrow"></span>View Photo Gallery</a> -->
 
     <!-- Events card -->
     <div class="eventsCard">
@@ -282,17 +282,17 @@
       <div class="eventsText">
 
         <!-- Date of event -->
-        <p class="date">Thurs, Sept 8 2022</p>
+        <p class="date">Fri, Sept 30 2022</p>
         <!-- Name of event -->
-        <h4>Get Involved Fair 2022</h4>
+        <h4>Getting Your First Job</h4>
 
         <!-- More event info -->
         <ul>
           <span>Further Details To Note:</span>
            <!-- Time of event -->
-            <li><i class="fa fa-clock"></i> 11.30pm - 2pm</li>
+            <li><i class="fa fa-clock"></i> 2pm - 3.30pm</li>
             <!-- Location of event -->
-            <li><i class="fa fa-map-marker-alt"></i> Polonsky Commons</li>
+            <li><i class="fa fa-map-marker-alt"></i> Google Meets</li>
             <!-- Fee of event -->
             <!-- Ex: $10 per person (tax not included) -->
             <li><i class="fa fa-ticket-alt"></i> Free</li>
@@ -302,7 +302,7 @@
         <!-- If netsoc has no featured event then replace current with noEvent -->
         <!-- If netsoc's featured event doesn't need registration then replace current with noRegistration -->
         <!-- If netsoc has a featured event then replace current with eventOptions -->
-        <a onclick="noRegistration();" class="register">Register</a>
+        <a onclick="eventOptionsNoRegister();" class="register">Register</a>
 
       </div>
 
@@ -379,7 +379,7 @@
     <!-- Name of section -->
     <h1 class="sectionTitle">Our Sponsors</h1>
     <!-- Name of section's arrow option -->
-    <a href="sponsors.html" class="sectionArrowTitle"><span class="arrow"></span>View All Sponsors</a>
+    <!-- <a href="sponsors.html" class="sectionArrowTitle"><span class="arrow"></span>View All Sponsors</a> -->
 
     <!-- Ensures news cards will loop -->
     <div class="sponsorsCarousel owl-carousel">
