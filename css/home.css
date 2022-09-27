@@ -380,6 +380,14 @@ div.owl-dots {
   color: #00bae9;
 }
 
+.eventsText a {
+  color: #000;
+}
+
+.eventsText a:hover {
+  color: #666666;
+}
+
 /* Register button inside event card */
 .eventsText a.register {
   background: #1b1b1b;
