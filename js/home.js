@@ -82,7 +82,7 @@ function eventOptionsNoRegister() {
   denyButtonColor: "#004c7b",
   allowOutsideClick: false,
   allowEscapeKey: false,
-  allowEnterKey:  false}).then((result) => {if (result.isDenied) {Swal.fire("Event doesn't require registration", ' ', 'info')}});
+  allowEnterKey:  false}).then((result) => {if (result.isDenied) {noRegistration();}});
 }
 
 // Popup will show if Netsoc not hiring executive members
