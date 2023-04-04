@@ -1,441 +1,522 @@
 /* Font for home page */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* All elements will have this configuration */
+
 * {
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Background of entire homepage  */
+
 body {
-  background: #212834;
+    background: #212834;
 }
+
 
 /* Menu */
+
 .menu {
-  background: #171C24;
-  /* Menu will always be on top, and will cover left to right of page */
-  position: fixed;
-  width: 100%;
-  /* Menu has higher number so that nothing will block menu;  */
-  z-index: 2;
+    background: #171C24;
+    /* Menu will always be on top, and will cover left to right of page */
+    position: fixed;
+    width: 100%;
+    /* Menu has higher number so that nothing will block menu;  */
+    z-index: 2;
 }
+
 
 /* Removes checkboxes beside each menu option */
+
 .menu input[type="checkbox"] {
-  display: none;
+    display: none;
 }
+
 
 /* Corrects the positioning and size inside menu */
+
 nav {
-  position: relative;
-  display: flex;
-  max-width: calc(100% - 200px);
-  margin: 0 auto;
-  height: 80px;
-  align-items: center;
-  justify-content: space-between;
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 /* Netsoc logo in the nav bar */
+
 .menuLogo a img {
-  font-size: 30px;
-  position: fixed;
-  top: -30px;
-  left: 50px;
-  width: 8em;
-  object-fit: cover;
-  height: auto;
-  transform: translateZ(0);
+    font-size: 30px;
+    position: fixed;
+    top: -30px;
+    left: 50px;
+    width: 8em;
+    object-fit: cover;
+    height: auto;
+    transform: translateZ(0);
 }
+
 
 /* Groups all options as one */
+
 .allMenuOptions {
-  /* Ensures all options are not blocked by netsoc logo */
-  margin-left: 200px;
-  /* Ensures all options are horizontally lined, not vertically */
-  display: flex;
+    /* Ensures all options are not blocked by netsoc logo */
+    margin-left: 200px;
+    /* Ensures all options are horizontally lined, not vertically */
+    display: flex;
 }
+
 
 /* Arrow beside "About" and "Events" */
+
 .allMenuOptions svg {
-  position: fixed;
-  margin-top: 28px;
+    /*  position: fixed; */
+    margin-top: 28px;
 }
+
 
 /* Remove bullet points from menu options */
+
 .allMenuOptions li {
-  list-style: none;
-  line-height: 80px;
+    list-style: none;
+    line-height: 80px;
 }
+
 
 /* Styling of menu options */
+
 .allMenuOptions li a,
 .allMenuOptions li label {
-  color: #A0A0A0;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    color: #A0A0A0;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
+
 
 /* Ensures mobileMenuOptions are not visible when screen big */
+
 .allMenuOptions li label {
-  display: none;
+    display: none;
 }
+
 
 /* Menu options turn blue when hovered */
+
 .allMenuOptions li a:hover,
 .allMenuOptions li label:hover {
-  color: #00bae9;
+    color: #00bae9;
 }
+
 
 /* Each menu option has 5px spacing between each other */
+
 .menuOption {
-  margin: auto 5px;
+    margin: auto 5px;
 }
+
 
 /* Hamburger icon in menu bar (responsive mode) */
+
 .menuIcon {
-  display: none;
-  position: fixed;
-  right: 0;
-  color: #FFF;
-  font-size: 22px;
-  cursor: pointer;
-  line-height: 80px;
-  width: 80px;
-  text-align: center;
+    display: none;
+    position: fixed;
+    right: 0;
+    color: #FFF;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 80px;
+    width: 80px;
+    text-align: center;
 }
+
 
 /* Content inside dropdown Menu (additional menu appears after hovering over "About" and "Events") */
+
 .allMenuOptions ul {
-  position: absolute;
-  background: #171c24;
-  top: 90px;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
+    position: absolute;
+    background: #171c24;
+    top: 90px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
 }
+
 
 /* Positioning of overall dropdown menu */
-.allMenuOptions li:hover > ul {
-  top: 80px;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.3s ease;
-}
 
-/* Ensures arrow beside menu option has animation */
-.allMenuOptions li:hover a > svg {
-  position: fixed;
-  margin-top: 30px;
-  transition: all 0s ease;
-}
-
-/* Spacing between additional menu options inside dropdown menu */
-.allMenuOptions ul li a {
-  display: block;
-  width: 100%;
-  line-height: 30px;
-  border-radius: 0px!important;
-}
-
-/* Responsive configuration for menu */
-@media screen and (max-width: 1250px) {
-  nav {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  .allMenuOptions {
-    margin-left: 285px;
-  }
-  .allMenuOptions li a {
-    padding: 8px 18px;
-  }
-}
-
-/* Responsive configuration for menu */
-@media screen and (max-width: 1220px) {
-  div.searchBox {
-    width: 0px;
-  }
-  .searchBox input {
-    display: none;
-  }
-}
-
-/* Responsive configuration for menu */
-@media screen and (max-width: 950px) {
-  .menuIcon {
-    display: block;
-  }
-  .menuLogo a img {
-    position: absolute;
-    top: -30px;
-    left: 0px;
-    width: 8em;
-    object-fit: cover;
-    height: auto;
-    transform: translateZ(0);
-  }
-  .allMenuOptions svg {
-    position: absolute;
-    margin-top: 7px;
-  }
-  #showMenu:checked ~ .menuIcon i::before {
-    content: "\f00d";
-  }
-  /* Opened Dropdown menu  */
-  .allMenuOptions {
-    display: block;
-    position: fixed;
-    background: #14181f;
-    height: 100%;
-    width: 100%;
+.allMenuOptions li:hover>ul {
     top: 80px;
-    left: -100%;
-    margin-left: 0;
-    /* max-width: 350px; */
-    /* TO DO: Ensure mobile menu dropdown closes after choosing an option */
-    max-width: 200px;
-    overflow-y: auto;
-    padding-bottom: 100px;
-    transition: all 0.3s ease;
-  }
-  #showMenu:checked ~ .menuContent .allMenuOptions {
-    left: 0%;
-  }
-  .allMenuOptions li {
-    margin: 15px 20px;
-  }
-  .allMenuOptions li a,
-  .allMenuOptions li label {
-    line-height: 40px;
-    font-size: 20px;
-    display: block;
-    padding: 8px 18px;
-    cursor: pointer;
-  }
-  .allMenuOptions li a.desktopMenuOption {
-    display: none;
-  }
-  /* dropdown responsive code start */
-  .allMenuOptions ul,
-  .allMenuOptions ul ul {
-    position: static;
     opacity: 1;
     visibility: visible;
-    background: none;
-    max-height: 0px;
-    overflow: hidden;
-  }
-  #showAbout:checked ~ label svg,
-  #showEvents:checked ~ label svg {
-    position: absolute;
-    margin-top: 10px;
-  }
-  #showAbout:checked ~ ul,
-  #showEvents:checked ~ ul,
-  #show-items:checked ~ ul {
-    max-height: 100vh;
-  }
-  .allMenuOptions ul li {
-    margin: 7px 20px;
-  }
-  .allMenuOptions ul li a {
-    font-size: 18px;
-    line-height: 30px;
-    border-radius: 5px!important;
-  }
+    transition: all 0.3s ease;
 }
+
+
+/* Ensures arrow beside menu option has animation */
+
+.allMenuOptions li:hover a>svg {
+    /*    position: fixed; */
+    margin-top: 30px;
+    transition: all 0s ease;
+}
+
+
+/* Spacing between additional menu options inside dropdown menu */
+
+.allMenuOptions ul li a {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px!important;
+}
+
 
 /* Responsive configuration for menu */
-@media screen and (max-width: 400px) {
-  nav {
-    padding: 0 10px;
-  }
-  .menuLogo a img {
-    font-size: 27px;
-    position: absolute;
-    top: -25px;
-    left: 0px;
-    width: 8em;
-    object-fit: cover;
-    height: auto;
-    transform: translateZ(0);
-  }
+
+@media screen and (max-width: 1250px) {
+    nav {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .allMenuOptions {
+        margin-left: 285px;
+    }
+    .allMenuOptions li a {
+        padding: 8px 18px;
+    }
 }
 
+
+/* Responsive configuration for menu */
+
+@media screen and (max-width: 1220px) {
+    div.searchBox {
+        width: 0px;
+    }
+    .searchBox input {
+        display: none;
+    }
+}
+
+
+/* Responsive configuration for menu */
+
+@media screen and (max-width: 950px) {
+    .menuIcon {
+        display: block;
+    }
+    .menuLogo a img {
+        position: absolute;
+        top: -30px;
+        left: 0px;
+        width: 8em;
+        object-fit: cover;
+        height: auto;
+        transform: translateZ(0);
+    }
+    .allMenuOptions svg {
+        position: absolute;
+        margin-top: 7px;
+    }
+    #showMenu:checked~.menuIcon i::before {
+        content: "\f00d";
+    }
+    /* Opened Dropdown menu  */
+    .allMenuOptions {
+        display: block;
+        position: fixed;
+        background: #14181f;
+        height: 100%;
+        width: 100%;
+        top: 80px;
+        left: -100%;
+        margin-left: 0;
+        /* max-width: 350px; */
+        /* TO DO: Ensure mobile menu dropdown closes after choosing an option */
+        max-width: 200px;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    #showMenu:checked~.menuContent .allMenuOptions {
+        left: 0%;
+    }
+    .allMenuOptions li {
+        margin: 15px 20px;
+    }
+    .allMenuOptions li a,
+    .allMenuOptions li label {
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .allMenuOptions li a.desktopMenuOption {
+        display: none;
+    }
+    /* dropdown responsive code start */
+    .allMenuOptions ul,
+    .allMenuOptions ul ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0px;
+        overflow: hidden;
+    }
+    #showAbout:checked~label svg,
+    #showEvents:checked~label svg {
+        position: absolute;
+        margin-top: 10px;
+    }
+    #showAbout:checked~ul,
+    #showEvents:checked~ul,
+    #show-items:checked~ul {
+        max-height: 100vh;
+    }
+    .allMenuOptions ul li {
+        margin: 7px 20px;
+    }
+    .allMenuOptions ul li a {
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 5px!important;
+    }
+}
+
+
+/* Responsive configuration for menu */
+
+@media screen and (max-width: 400px) {
+    nav {
+        padding: 0 10px;
+    }
+    .menuLogo a img {
+        font-size: 27px;
+        position: absolute;
+        top: -25px;
+        left: 0px;
+        width: 8em;
+        object-fit: cover;
+        height: auto;
+        transform: translateZ(0);
+    }
+}
+
+
 /* Styling searchbar */
+
 .searchBox {
-  position: fixed;
-  top: 15px;
-  right: 50px;
-  height: 50px;
-  width: 60px;
-  border-radius: 50%;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  width: 300px;
+    position: fixed;
+    top: 15px;
+    right: 50px;
+    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 300px;
 }
 
 .searchBox input {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 50px;
-  background: #003c52;
-  outline: none;
-  padding: 0 60px 0 20px;
-  font-size: 18px;
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #003c52;
+    outline: none;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 
 /* Color of text in searchbar */
+
 .searchBox input.active {
-  opacity: 1;
-  color: #00bae9;
+    opacity: 1;
+    color: #00bae9;
 }
+
 
 /* Color of placeholder text (Search Netsoc) in searchbar */
+
 .searchBox input::placeholder {
-  color: #a0a0a0;
+    color: #a0a0a0;
 }
 
+
 /* Styling magnifying glass in searchbar */
+
 .searchIcon {
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60px;
-  width: 60px;
-  /* background: #00bae9; */
-  border-radius: 50%;
-  text-align: center;
-  line-height: 60px;
-  font-size: 22px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: 60px;
+    /* background: #00bae9; */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .searchIcon.active {
-  right: 0;
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
-  font-size: 20px;
-  background: #00bae9;
-  color: #fff;
-  transform: translateY(-50%) rotate(360deg);
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background: #00bae9;
+    color: #fff;
+    transform: translateY(-50%) rotate(360deg);
 }
+
 
 /* Ensures stops at section title instead of actual component */
+
 :target:before {
-  content: "";
-  display: block;
-  height: 90px; /* fixed header height*/
-  margin: -90px 0 0; /* negative fixed header height */
+    content: "";
+    display: block;
+    height: 90px;
+    /* fixed header height*/
+    margin: -90px 0 0;
+    /* negative fixed header height */
 }
+
 
 /* Ensures each section (News, Events, Sponsors) will have same spacing */
+
 .optionSection {
-  margin-top: 20px;
-  width: 100%;
-  padding: 0px 30px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0px 30px;
 }
+
 
 /* Title of each section (News, Events, Sponsors) */
+
 .sectionTitle {
-  color: #CBCCD6;
+    color: #CBCCD6;
 }
+
 
 /* footer of website */
-footer {
-  margin-top: 35px;
-  width: 100%;
-  background: #14181f;
 
+footer {
+    margin-top: 35px;
+    width: 100%;
+    background: #14181f;
 }
+
 
 /* corrects positioning of all contact links + title */
+
 .contactWrapperBase {
-  display: flex;
+    display: flex;
 }
+
 
 /* Further positioning configuration for all contact links + title */
+
 .contactWrapper {
-  flex-basis: 100%;
-  padding: 10px 20px;
-  text-align: center;
+    flex-basis: 100%;
+    padding: 10px 20px;
+    text-align: center;
 }
+
 
 /* Title of all contacts */
+
 .contactWrapper h2 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #A0A0A0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #A0A0A0;
 }
+
 
 /* All contact links grouped as one */
+
 .contacts {
-  margin: 10px 0 0 0;
-  position: relative;
+    margin: 10px 0 0 0;
+    position: relative;
 }
+
 
 /* Each individual contact link */
+
 .contacts a {
-  padding: 0 1px;
-  color: #A0A0A0;
+    padding: 0 1px;
+    color: #A0A0A0;
 }
+
 
 /* The icon of each individual contact link  */
+
 .contacts a span {
-  height: 40px;
-  width: 40px;
-  /* background: #1a1a1a; */
-  line-height: 40px;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.3s;
+    height: 40px;
+    width: 40px;
+    /* background: #1a1a1a; */
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
+
 
 /* When hovering over the icon of the contact link, it will be highlighted */
+
 .contacts a span:hover {
-  color: #00bae9;
+    color: #00bae9;
 }
+
 
 /* Copyright icon + text grouped together as one */
+
 .copyrightWrapper {
-  padding: 5px;
-  font-size: 0.9375rem;
-  background: #14181f;
-  text-align: center;
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #14181f;
+    text-align: center;
 }
+
 
 /* Each individual element in copyright */
+
 .copyrightWrapper span {
-  color: #656565;
+    color: #656565;
 }
 
+
 /* Responsive configuration for footer */
+
 @media screen and (max-width: 900px) {
-  .contactWrapperBase{
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .contactWrapper{
-    margin: 5px 0;
-  }
+    .contactWrapperBase {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contactWrapper {
+        margin: 5px 0;
+    }
 }

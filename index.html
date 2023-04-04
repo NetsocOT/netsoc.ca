@@ -3,68 +3,70 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <!-- Sets title of web tab -->
-  <title>Networking and IT Security Student's Association | Netsoc OntarioTech</title>
-  <!-- Sets favicon (Netsoc logo applied as icon image in browser tab) -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <!-- CSS imported and applied -->
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/home.css">
-  <!-- FontAwesome CSS imported and applied -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!-- SweetAlert 2 Dark Mode CSS imported and applied -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
-  <!-- JQuery imported and applied -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
-  <style media="screen"></style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Sets title of web tab -->
+    <title>Networking and IT Security Student's Association | Netsoc OntarioTech</title>
+    <!-- Sets favicon (Netsoc logo applied as icon image in browser tab) -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- CSS imported and applied -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- FontAwesome CSS imported and applied -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- SweetAlert 2 Dark Mode CSS imported and applied -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
+    <!-- JQuery imported and applied -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-  <!-- Menu bar -->
-  <div class="menu">
+    <!-- Menu bar -->
+    <div class="menu">
 
-    <nav>
+        <nav>
 
-      <!-- Hamburger icon for menu -->
-      <input type="checkbox" id="showMenu">
-      <label for="showMenu" class="menuIcon"><i class="fas fa-bars"></i></label>
+            <!-- Hamburger icon for menu -->
+            <input type="checkbox" id="showMenu">
+            <label for="showMenu" class="menuIcon"><i class="fas fa-bars"></i></label>
 
-      <!-- Includes:
+            <!-- Includes:
       - Netsoc Logo
       - All menu options
       - Arrow beside menu option
       - Dropdown on menu arrow options
       - Searchbar -->
-      <div class="menuContent">
+            <div class="menuContent">
 
-        <!-- Netsoc logo inside menu -->
-        <div class="menuLogo"><a href="/"><img src="images/logos/netsoc/NetsocLogo.png" alt="Netsoc logo"></a></div>
+                <!-- Netsoc logo inside menu -->
+                <div class="menuLogo">
+                    <a href="/"><img src="images/logos/netsoc/NetsocLogo.png" alt="Netsoc logo"></a>
+                </div>
 
-        <!-- About, News, Events, Sponsors, Contact -->
-        <ul class="allMenuOptions">
+                <!-- About, News, Events, Sponsors, Contact -->
+                <ul class="allMenuOptions">
 
-          <!-- "About" menu option -->
-          <li class="menuOption" >
+                    <!-- "About" menu option -->
+                    <li class="menuOption">
 
-            <!-- Desktop: "About" menu option -->
-            <a href="#about" class="desktopMenuOption"> About
+                        <!-- Desktop: "About" menu option -->
+                        <a href="#about" class="desktopMenuOption"> About
               <!-- Arrow icon beside menu option -->
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
+              <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" role="img" width="1em" height="1em"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path fill="currentColor"
+              d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05a2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17Z" />
               </svg>
             </a>
 
-            <!-- Mobile:"About" menu option -->
-            <input type="checkbox" id="showAbout" onclick="goToAnchor('about')">
-            <label for="showAbout">
+                        <!-- Mobile:"About" menu option -->
+                        <input type="checkbox" id="showAbout" onclick="goToAnchor('about')">
+                        <label for="showAbout">
               About
               <!-- Arrow icon beside menu option -->
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
@@ -74,22 +76,22 @@
               </svg>
             </label>
 
-            <!-- Dropdown on "About" menu option -->
-            <ul>
-              <li><a href="overview.html">Club Overview</a></li>
-              <li><a href="team.html">Our Team</a></li>
-            </ul>
+                        <!-- Dropdown on "About" menu option -->
+                        <ul>
+                            <li><a href="overview.html">Club Overview</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                        </ul>
 
-          </li>
+                    </li>
 
-          <!-- "News" menu option -->
-          <li class="menuOption"><a href="#news">News</a></li>
+                    <!-- "News" menu option -->
+                    <li class="menuOption"><a href="#news">News</a></li>
 
-          <!-- "Events" menu option -->
-          <li class="menuOption">
+                    <!-- "Events" menu option -->
+                    <li class="menuOption">
 
-            <!-- Desktop: "Events" menu option -->
-            <a href="#events" class="desktopMenuOption">
+                        <!-- Desktop: "Events" menu option -->
+                        <a href="#events" class="desktopMenuOption">
               Events
               <!-- Arrow icon beside menu option -->
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
@@ -99,9 +101,9 @@
               </svg>
             </a>
 
-            <!-- Mobile: "Events" menu option -->
-            <input type="checkbox" id="showEvents" onclick="goToAnchor('events')">
-            <label for="showEvents">
+                        <!-- Mobile: "Events" menu option -->
+                        <input type="checkbox" id="showEvents" onclick="goToAnchor('events')">
+                        <label for="showEvents">
               Events
               <!-- Arrow icon beside menu option -->
               <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
@@ -111,342 +113,342 @@
               </svg>
             </label>
 
-            <!-- Dropdown on "Events" menu option -->
-            <ul>
-              <li><a href="#joinus">Join Us</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-            </ul>
+                        <!-- Dropdown on "Events" menu option -->
+                        <ul>
+                            <li><a href="#joinus">Join Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
 
-          </li>
+                    </li>
 
-          <!-- "Sponsors" menu option -->
-          <li class="menuOption"><a href="#sponsors">Sponsors</a></li>
-          <!-- "Contact" menu option -->
-          <li class="menuOption"><a href="#contact">Contact</a></li>
+                    <!-- "Sponsors" menu option -->
+                    <li class="menuOption"><a href="#sponsors">Sponsors</a></li>
+                    <!-- "Contact" menu option -->
+                    <li class="menuOption"><a href="#contact">Contact</a></li>
 
-        </ul>
+                </ul>
 
-      </div>
+            </div>
 
-      <!-- Search bar -->
-      <!-- <form class="" action="/" method="post" id="searchBar"> -->
-      <form class="" id="searchBar">
-        <!-- Input field for search bar -->
-        <div class="searchBox">
-          <input type="text" placeholder="Search Netsoc" class="active">
-          <!-- Magnifying glass icon -->
-          <div class="searchIcon">
-            <i class="fas fa-search"></i>
-          </div>
-        </div>
-      </form>
+            <!-- Search bar -->
+            <!-- <form class="" action="/" method="post" id="searchBar"> -->
+            <form class="" id="searchBar">
+                <!-- Input field for search bar -->
+                <div class="searchBox">
+                    <input type="text" placeholder="Search Netsoc" class="active">
+                    <!-- Magnifying glass icon -->
+                    <div class="searchIcon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </form>
 
-    </nav>
+        </nav>
 
-  </div>
+    </div>
 
-  <!-- Short introductory "About Us" banner -->
-  <!-- If user clicks on "About" menu option, they will be shown this banner -->
-  <section class="introductoryBanner">
+    <!-- Short introductory "About Us" banner -->
+    <!-- If user clicks on "About" menu option, they will be shown this banner -->
+    <section class="introductoryBanner">
 
-    <!-- Introductory banner's background -->
-    <video muted autoplay loop class="introductoryBannerVideo"  id="about">
+        <!-- Introductory banner's background -->
+        <video muted autoplay loop class="introductoryBannerVideo" id="about">
       <source src="images/hero/mainHeader.mp4" type="video/mp4" media="">
     </video>
 
-    <!-- Introductory banner's text -->
-    <div class="introductoryBannerContent">
-      <h1 class="introductoryBannerTitle">Netsoc</h1>
-      <p class="introductoryBannerTitle introductoryBannerDescription">
-        Benefiting fellow members' extracurricular experience by providing learning and professional development opportunities and ultimately helping students to develop their careers in Networking and IT Security.</p>
-        <!-- Introductory banner options -->
-        <a href="overview.html" class="introductoryBannerOptions">Find Out More</a>
-        <a href="team.html" class="introductoryBannerOptions">Meet The Team</a>
-    </div>
-
-  </section>
-
-  <!-- News section -->
-  <div class="optionSection" id="news">
-
-    <!-- Name of section -->
-    <h1 class="sectionTitle">Latest News</h1>
-    <!-- Name of section's arrow option -->
-    <!-- <a href="/posts" class="sectionArrowTitle"><span class="arrow"></span>View All News</a> -->
-
-    <!-- Ensures news cards will loop -->
-    <div class="newsCarousel owl-carousel">
-
-      <!-- News card -->
-      <!-- Need at least 4 featured articles to loop -->
-
-      <div class="newsCard">
-
-        <!-- Image of News card -->
-        <div class="newsImg"><img src="images/posts/post10.png" alt=""></div>
-
-        <!-- Content inside News card -->
-        <div class="newsContent">
-          <!-- News title -->
-          <div class="newsTitle">Getting Your First Job</div>
-          <!-- News posted date -->
-          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 27, 2022</div>
-          <!-- News description -->
-          <p>Attention all STEM students! Are you worried about finding a job post-grad? Sean C. Higgins, CTO and Co-founder of Herjavec Group and Cybersecurity Expert for almost 30 years, is coming on Sept 30th from 2pm - 3.30pm</p>
-          <!-- News read more button -->
-          <div class="newsBtn"><a href="posts/post10.html">Read more</a></div>
+        <!-- Introductory banner's text -->
+        <div class="introductoryBannerContent">
+            <h1 class="introductoryBannerTitle">Netsoc</h1>
+            <p class="introductoryBannerTitle introductoryBannerDescription">
+                Benefiting fellow members' extracurricular experience by providing learning and professional development opportunities and ultimately helping students to develop their careers in Networking and IT Security.</p>
+            <!-- Introductory banner options -->
+            <a href="overview.html" class="introductoryBannerOptions">Find Out More</a>
+            <a href="team.html" class="introductoryBannerOptions">Meet The Team</a>
         </div>
 
-      </div>
+    </section>
 
-      <div class="newsCard">
+    <!-- News section -->
+    <div class="optionSection" id="news">
 
-        <!-- Image of News card -->
-        <div class="newsImg"><img src="images/posts/post9.png" alt=""></div>
+        <!-- Name of section -->
+        <h1 class="sectionTitle">Latest News</h1>
+        <!-- Name of section's arrow option -->
+        <!-- <a href="/posts" class="sectionArrowTitle"><span class="arrow"></span>View All News</a> -->
 
-        <!-- Content inside News card -->
-        <div class="newsContent">
-          <!-- News title -->
-          <div class="newsTitle">Labatt's Tech X Talk</div>
-          <!-- News posted date -->
-          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 22, 2022</div>
-          <!-- News description -->
-          <p>Calling all undergraduate students interested in technology and innovation! Join Labatt Breweries of Canada’s “TECHx Talk” event to learn more about their company, culture, and how they are innovating in the digital space</p>
-          <!-- News read more button -->
-          <div class="newsBtn"><a href="posts/post9.html">Read more</a></div>
+        <!-- Ensures news cards will loop -->
+        <div class="newsCarousel owl-carousel">
+
+            <!-- News card -->
+            <!-- Need at least 4 featured articles to loop -->
+
+            <div class="newsCard">
+
+                <!-- Image of News card -->
+                <div class="newsImg"><img src="images/posts/post10.png" alt=""></div>
+
+                <!-- Content inside News card -->
+                <div class="newsContent">
+                    <!-- News title -->
+                    <div class="newsTitle">Getting Your First Job</div>
+                    <!-- News posted date -->
+                    <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 27, 2022</div>
+                    <!-- News description -->
+                    <p>Attention all STEM students! Are you worried about finding a job post-grad? Sean C. Higgins, CTO and Co-founder of Herjavec Group and Cybersecurity Expert for almost 30 years, is coming on Sept 30th from 2pm - 3.30pm</p>
+                    <!-- News read more button -->
+                    <div class="newsBtn"><a href="posts/post10.html">Read more</a></div>
+                </div>
+
+            </div>
+
+            <div class="newsCard">
+
+                <!-- Image of News card -->
+                <div class="newsImg"><img src="images/posts/post9.png" alt=""></div>
+
+                <!-- Content inside News card -->
+                <div class="newsContent">
+                    <!-- News title -->
+                    <div class="newsTitle">Labatt's Tech X Talk</div>
+                    <!-- News posted date -->
+                    <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 22, 2022</div>
+                    <!-- News description -->
+                    <p>Calling all undergraduate students interested in technology and innovation! Join Labatt Breweries of Canada’s “TECHx Talk” event to learn more about their company, culture, and how they are innovating in the digital space</p>
+                    <!-- News read more button -->
+                    <div class="newsBtn"><a href="posts/post9.html">Read more</a></div>
+                </div>
+
+            </div>
+
+            <div class="newsCard">
+
+                <!-- Image of News card -->
+                <div class="newsImg"><img src="images/posts/post8.png" alt=""></div>
+
+                <!-- Content inside News card -->
+                <div class="newsContent">
+                    <!-- News title -->
+                    <div class="newsTitle">Open Source Project</div>
+                    <!-- News posted date -->
+                    <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 21, 2022</div>
+                    <!-- News description -->
+                    <p>We are excited to announce that we will be starting an open source project across all Networking students!</p>
+                    <!-- News read more button -->
+                    <div class="newsBtn"><a href="posts/post8.html">Read more</a></div>
+                </div>
+
+            </div>
+
+            <div class="newsCard">
+
+                <!-- Image of News card -->
+                <div class="newsImg"><img src="images/posts/post7.png" alt=""></div>
+
+                <!-- Content inside News card -->
+                <div class="newsContent">
+                    <!-- News title -->
+                    <div class="newsTitle">SecTor 2022 with Netsoc</div>
+                    <!-- News posted date -->
+                    <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 20, 2022</div>
+                    <!-- News description -->
+                    <p>Come to SecTor 2022 with Netsoc! You won't want to miss this opportunity to attend this IT security conference</p>
+                    <!-- News read more button -->
+                    <div class="newsBtn"><a href="posts/post7.html">Read more</a></div>
+                </div>
+
+            </div>
+
         </div>
-
-      </div>
-
-      <div class="newsCard">
-
-        <!-- Image of News card -->
-        <div class="newsImg"><img src="images/posts/post8.png" alt=""></div>
-
-        <!-- Content inside News card -->
-        <div class="newsContent">
-          <!-- News title -->
-          <div class="newsTitle">Open Source Project</div>
-          <!-- News posted date -->
-          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 21, 2022</div>
-          <!-- News description -->
-          <p>We are excited to announce that we will be starting an open source project across all Networking students!</p>
-          <!-- News read more button -->
-          <div class="newsBtn"><a href="posts/post8.html">Read more</a></div>
-        </div>
-
-      </div>
-
-      <div class="newsCard">
-
-        <!-- Image of News card -->
-        <div class="newsImg"><img src="images/posts/post7.png" alt=""></div>
-
-        <!-- Content inside News card -->
-        <div class="newsContent">
-          <!-- News title -->
-          <div class="newsTitle">SecTor 2022 with Netsoc</div>
-          <!-- News posted date -->
-          <div class="newsDate"><i class="fas fa-calendar-alt"></i> September 20, 2022</div>
-          <!-- News description -->
-          <p>Come to SecTor 2022 with Netsoc! You won't want to miss this opportunity to attend this IT security conference</p>
-          <!-- News read more button -->
-          <div class="newsBtn"><a href="posts/post7.html">Read more</a></div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- Events section -->
-  <div class="optionSection" id="events">
-
-    <!-- Name of section -->
-    <h1 class="sectionTitle">Next Event</h1>
-    <!-- Name of section's arrow option -->
-    <!-- <a href="events.html" class="sectionArrowTitle"><span class="arrow"></span>View All Events</a><br> -->
-    <!-- Name of section's arrow option -->
-    <!-- <a href="gallery.html" class="sectionArrowTitle"><span class="arrow"></span>View Photo Gallery</a> -->
-
-    <!-- Events card -->
-    <div class="eventsCard">
-
-      <!-- The design portion of the card: The punched holes and lines on the left side -->
-      <div class="eventsAesthetic">
-        <div class="eventSolidLine"></div>
-        <div class="eventDottedLine"></div>
-      </div>
-
-      <!-- Text inside the events ticket card -->
-      <div class="eventsText">
-
-        <!-- Date of event -->
-        <p class="date">Fri, Sept 30 2022</p>
-        <!-- Name of event -->
-        <h4>Getting Your First Job</h4>
-
-        <!-- More event info -->
-        <ul>
-          <span>Further Details To Note:</span>
-           <!-- Time of event -->
-            <li><i class="fa fa-clock"></i> 2pm - 3.30pm</li>
-            <!-- Location of event -->
-            <li><i class="fa fa-map-marker-alt"></i><a href="https://meet.google.com/trt-izbr-cnc" target="_blank"> Google Meets</a></li>
-            <!-- Fee of event -->
-            <!-- Ex: $10 per person (tax not included) -->
-            <li><i class="fa fa-ticket-alt"></i> Free</li>
-        </ul>
-
-        <!-- Register for event button -->
-        <!-- If netsoc has no featured event then replace current with noEvent -->
-        <!-- If netsoc's featured event doesn't need registration then replace current with noRegistration -->
-        <!-- If netsoc has a featured event then replace current with eventOptions -->
-        <a onclick="eventOptionsNoRegister();" class="register">Register</a>
-
-      </div>
 
     </div>
 
-  </div>
+    <!-- Events section -->
+    <div class="optionSection" id="events">
 
-  <!-- Join Us section -->
-  <div class="optionSection">
+        <!-- Name of section -->
+        <h1 class="sectionTitle">Next Event</h1>
+        <!-- Name of section's arrow option -->
+        <!-- <a href="events.html" class="sectionArrowTitle"><span class="arrow"></span>View All Events</a><br> -->
+        <!-- Name of section's arrow option -->
+        <!-- <a href="gallery.html" class="sectionArrowTitle"><span class="arrow"></span>View Photo Gallery</a> -->
 
-    <!-- Name of section -->
-    <h1 id="joinus" class="sectionTitle">Get Involved</h1>
+        <!-- Events card -->
+        <div class="eventsCard">
 
-    <!-- All involved cards -->
-    <div class="involvedWrapper">
+            <!-- The design portion of the card: The punched holes and lines on the left side -->
+            <div class="eventsAesthetic">
+                <div class="eventSolidLine"></div>
+                <div class="eventDottedLine"></div>
+            </div>
 
-      <!-- General Member card -->
-      <div class="involvedCard">
+            <!-- Text inside the events ticket card -->
+            <div class="eventsText">
 
-        <!-- General Member's image and title -->
-				<div class="involvedContent">
-					<div class="involvedImage"><img src="images/joinus/member.png"></div>
-					<h3>Become a member</h3>
-				</div>
+                <!-- Date of event -->
+                <p class="date">Fri, Sept 30 2022</p>
+                <!-- Name of event -->
+                <h4>Getting Your First Job</h4>
 
-        <!-- General Member's button -->
-        <div class="involvedButton">
-          <a href="https://forms.gle/f6KNxZd3wkXFRDncA" target="_blank">Join a community</a>
+                <!-- More event info -->
+                <ul>
+                    <span>Further Details To Note:</span>
+                    <!-- Time of event -->
+                    <li><i class="fa fa-clock"></i> 2pm - 3.30pm</li>
+                    <!-- Location of event -->
+                    <li><i class="fa fa-map-marker-alt"></i><a href="https://meet.google.com/trt-izbr-cnc" target="_blank"> Google Meets</a></li>
+                    <!-- Fee of event -->
+                    <!-- Ex: $10 per person (tax not included) -->
+                    <li><i class="fa fa-ticket-alt"></i> Free</li>
+                </ul>
+
+                <!-- Register for event button -->
+                <!-- If netsoc has no featured event then replace current with noEvent -->
+                <!-- If netsoc's featured event doesn't need registration then replace current with noRegistration -->
+                <!-- If netsoc has a featured event then replace current with eventOptions -->
+                <a onclick="eventOptionsNoRegister();" class="register">Register</a>
+
+            </div>
+
         </div>
-
-			</div>
-
-      <!-- Executive Member card -->
-			<div class="involvedCard">
-
-        <!-- Executive Member's image and title -->
-				<div class="involvedContent">
-					<div class="involvedImage"><img src="images/joinus/executive.png"></div>
-					<h3>Become an executive</h3>
-				</div>
-
-        <!-- Executive Member's button -->
-        <div class="involvedButton">
-          <!-- If netsoc is hiring then replace current with with hiringOptions -->
-          <!-- If netsoc is nor hiring then replace current with noExecutive -->
-          <a onclick="noExecutive();">Expand your experience</a>
-        </div>
-
-			</div>
-
-      <!-- Sponsor card -->
-			<div class="involvedCard">
-
-        <!-- Sponsor's image and title -->
-				<div class="involvedContent">
-					<div class="involvedImage"><img src="images/joinus/sponsor.png"></div>
-          <h3>Become a sponsor</h3>
-				</div>
-
-        <!-- Sponsor button -->
-        <div class="involvedButton">
-          <a onclick="sponsorOptions();">Increase student outreach</a>
-        </div>
-
-			</div>
-
-		</div>
-
-  </div>
-
-  <!-- Sponsors section -->
-  <div class="optionSection" id="sponsors">
-
-    <!-- Name of section -->
-    <h1 class="sectionTitle">Our Sponsors</h1>
-    <!-- Name of section's arrow option -->
-    <!-- <a href="sponsors.html" class="sectionArrowTitle"><span class="arrow"></span>View All Sponsors</a> -->
-
-    <!-- Ensures news cards will loop -->
-    <div class="sponsorsCarousel owl-carousel">
-
-      <!-- Sponsors card -->
-      <div class="sponsorsCard">
-        <!-- Image of Sponsors card -->
-        <div class="sponsorsImg"><img src="images/logos/sponsors/OntarioTechLogo.png" alt=""></div>
-      </div>
-
-      <!-- Sponsors card -->
-      <div class="sponsorsCard">
-        <!-- Image of Sponsors card -->
-        <div class="sponsorsImg"><img src="images/logos/sponsors/VerkadaLogo.png" alt=""></div>
-      </div>
-
-      <!-- Sponsors card -->
-      <div class="sponsorsCard">
-        <!-- Image of Sponsors card -->
-        <div class="sponsorsImg"><img src="images/logos/sponsors/CiscoMerakiLogo.png" alt=""></div>
-      </div>
 
     </div>
 
-  </div>
+    <!-- Join Us section -->
+    <div class="optionSection">
 
-  <!-- Footer section -->
-  <footer>
+        <!-- Name of section -->
+        <h1 id="joinus" class="sectionTitle">Get Involved</h1>
 
-    <!-- All contact links+ title (just sets display as flex) -->
-    <div class="contactWrapperBase" id="contact">
+        <!-- All involved cards -->
+        <div class="involvedWrapper">
 
-      <!-- All contact links+ title (further configuration) -->
-      <div class="contactWrapper">
+            <!-- General Member card -->
+            <div class="involvedCard">
 
-        <!-- Title of all contacts -->
-        <h2>Connect With Netsoc</h2>
+                <!-- General Member's image and title -->
+                <div class="involvedContent">
+                    <div class="involvedImage"><img src="images/joinus/member.png"></div>
+                    <h3>Become a member</h3>
+                </div>
 
-        <!-- All contact links grouped as one -->
-        <div class="contacts">
-          <a href="https://maps.google.com/?q=Ontario%20Tech%20University" target="_blank"><span class="fas fa-map-marker-alt"></span></a>
-          <a href="mailto:netsoc@ontariotechu.net"><span class="fas fa-envelope"></span></a>
-          <a href="https://discord.gg/PGjcV5nBeP" target="_blank"><span class="fab fa-discord"></span></a>
-          <a href="https://www.instagram.com/ot_netsoc/" target="_blank"><span class="fab fa-instagram"></span></a>
-          <a href="https://twitter.com/OT_Netsoc" target="_blank"><span class="fab fa-twitter"></span></a>
-          <a href="https://www.linkedin.com/company/ot-netsoc/" target="_blank"><span class="fab fa-linkedin"></span></a>
+                <!-- General Member's button -->
+                <div class="involvedButton">
+                    <a href="https://forms.gle/f6KNxZd3wkXFRDncA" target="_blank">Join a community</a>
+                </div>
+
+            </div>
+
+            <!-- Executive Member card -->
+            <div class="involvedCard">
+
+                <!-- Executive Member's image and title -->
+                <div class="involvedContent">
+                    <div class="involvedImage"><img src="images/joinus/executive.png"></div>
+                    <h3>Become an executive</h3>
+                </div>
+
+                <!-- Executive Member's button -->
+                <div class="involvedButton">
+                    <!-- If netsoc is hiring then replace current with with hiringOptions -->
+                    <!-- If netsoc is nor hiring then replace current with noExecutive -->
+                    <a onclick="noExecutive();">Expand your experience</a>
+                </div>
+
+            </div>
+
+            <!-- Sponsor card -->
+            <div class="involvedCard">
+
+                <!-- Sponsor's image and title -->
+                <div class="involvedContent">
+                    <div class="involvedImage"><img src="images/joinus/sponsor.png"></div>
+                    <h3>Become a sponsor</h3>
+                </div>
+
+                <!-- Sponsor button -->
+                <div class="involvedButton">
+                    <a onclick="sponsorOptions();">Increase student outreach</a>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
+    </div>
+
+    <!-- Sponsors section -->
+    <div class="optionSection" id="sponsors">
+
+        <!-- Name of section -->
+        <h1 class="sectionTitle">Our Sponsors</h1>
+        <!-- Name of section's arrow option -->
+        <!-- <a href="sponsors.html" class="sectionArrowTitle"><span class="arrow"></span>View All Sponsors</a> -->
+
+        <!-- Ensures news cards will loop -->
+        <div class="sponsorsCarousel owl-carousel">
+
+            <!-- Sponsors card -->
+            <div class="sponsorsCard">
+                <!-- Image of Sponsors card -->
+                <div class="sponsorsImg"><img src="images/logos/sponsors/OntarioTechLogo.png" alt=""></div>
+            </div>
+
+            <!-- Sponsors card -->
+            <div class="sponsorsCard">
+                <!-- Image of Sponsors card -->
+                <div class="sponsorsImg"><img src="images/logos/sponsors/VerkadaLogo.png" alt=""></div>
+            </div>
+
+            <!-- Sponsors card -->
+            <div class="sponsorsCard">
+                <!-- Image of Sponsors card -->
+                <div class="sponsorsImg"><img src="images/logos/sponsors/CiscoMerakiLogo.png" alt=""></div>
+            </div>
+
+        </div>
 
     </div>
 
-    <!-- copyright icon + text -->
-    <div class="copyrightWrapper">
-      <!-- copyright icon -->
-      <span class="far fa-copyright"></span>
-      <!-- copyright text -->
-      <span>Netsoc 2022 All Rights Reserved</span>
-    </div>
+    <!-- Footer section -->
+    <footer>
 
-  </footer>
+        <!-- All contact links+ title (just sets display as flex) -->
+        <div class="contactWrapperBase" id="contact">
 
-  <!-- Script points towards my JS file -->
-  <script src = "js/home.js"></script>
-  <!-- Script points towards sweetalert 2 JS file -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+            <!-- All contact links+ title (further configuration) -->
+            <div class="contactWrapper">
+
+                <!-- Title of all contacts -->
+                <h2>Connect With Netsoc</h2>
+
+                <!-- All contact links grouped as one -->
+                <div class="contacts">
+                    <a href="https://maps.google.com/?q=Ontario%20Tech%20University" target="_blank"><span class="fas fa-map-marker-alt"></span></a>
+                    <a href="mailto:netsoc@ontariotechu.net"><span class="fas fa-envelope"></span></a>
+                    <a href="https://discord.gg/PGjcV5nBeP" target="_blank"><span class="fab fa-discord"></span></a>
+                    <a href="https://www.instagram.com/ot_netsoc/" target="_blank"><span class="fab fa-instagram"></span></a>
+                    <a href="https://twitter.com/OT_Netsoc" target="_blank"><span class="fab fa-twitter"></span></a>
+                    <a href="https://www.linkedin.com/company/ot-netsoc/" target="_blank"><span class="fab fa-linkedin"></span></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- copyright icon + text -->
+        <div class="copyrightWrapper">
+            <!-- copyright icon -->
+            <span class="far fa-copyright"></span>
+            <!-- copyright text -->
+            <span>Netsoc 2022 All Rights Reserved</span>
+        </div>
+
+    </footer>
+
+    <!-- Script points towards my JS file -->
+    <script src="js/home.js"></script>
+    <!-- Script points towards sweetalert 2 JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
 </body>
 
